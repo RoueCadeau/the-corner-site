@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cafethecorner.fr/sitemap.xml
+Sitemap: https://cafethecorner.fr/sitemap.xml
