@@ -1,0 +1,18 @@
+.DS_Store
+.claude/settings.local.json
+node_modules/
+.netlify/
+
+# Assets non utilisés par le site (gardés en local, exclus du dépôt pour ne pas l'alourdir)
+assets/img/photos/cup.png
+assets/img/photos/sidewalk.png
+assets/img/gradients/gradient-05.jpg
+assets/img/gradients/gradient-06.jpg
+assets/img/gradients/gradient-07.jpg
+assets/img/gradients/gradient-08.jpg
+assets/img/gradients/gradient-09.jpg
+assets/img/gradients/gradient-10.jpg
+assets/img/gradients/gradient-11.jpg
+assets/img/gradients/gradient-12.jpg
+assets/img/gradients/gradient-13.jpg
+assets/img/gradients/gradient-14.jpg
