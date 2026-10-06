@@ -5,14 +5,14 @@
    ========================================================== */
 
 /* ---------- Fonts ---------- */
-@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-Light.otf') format('opentype'); font-weight:300; font-style:normal; font-display:optional; }
-@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-Regular.otf') format('opentype'); font-weight:400; font-style:normal; font-display:swap; }
-@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-Medium.otf') format('opentype'); font-weight:500; font-style:normal; font-display:swap; }
-@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-SemiBold.otf') format('opentype'); font-weight:600; font-style:normal; font-display:swap; }
-@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-ExtraLightItalic.otf') format('opentype'); font-weight:200; font-style:italic; font-display:swap; }
-@font-face { font-family:'Newsreader'; src:url('../fonts/Newsreader-Regular.ttf') format('truetype'); font-weight:400; font-style:normal; font-display:swap; }
-@font-face { font-family:'Newsreader'; src:url('../fonts/Newsreader-Italic.ttf') format('truetype'); font-weight:400; font-style:italic; font-display:optional; }
-@font-face { font-family:'Newsreader'; src:url('../fonts/Newsreader-MediumItalic.ttf') format('truetype'); font-weight:500; font-style:italic; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-Light.woff2') format('woff2'); font-weight:300; font-style:normal; font-display:optional; }
+@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-Medium.woff2') format('woff2'); font-weight:500; font-style:normal; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-SemiBold.woff2') format('woff2'); font-weight:600; font-style:normal; font-display:swap; }
+@font-face { font-family:'Poppins'; src:url('../fonts/Poppins-ExtraLightItalic.woff2') format('woff2'); font-weight:200; font-style:italic; font-display:swap; }
+@font-face { font-family:'Newsreader'; src:url('../fonts/Newsreader-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Newsreader'; src:url('../fonts/Newsreader-Italic.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:optional; }
+@font-face { font-family:'Newsreader'; src:url('../fonts/Newsreader-MediumItalic.woff2') format('woff2'); font-weight:500; font-style:italic; font-display:swap; }
 
 /* ---------- Variables ---------- */
 :root {
