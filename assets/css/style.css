@@ -725,7 +725,7 @@ a.card .card__link { margin-top:auto; }
 }
 .booking-panel.is-open { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
 .booking-panel__head { display:flex; align-items:center; justify-content:space-between; padding:16px 18px; border-bottom:1px solid rgba(72,38,29,.1); flex:none; }
-.booking-panel__title { font-weight:600; color:var(--brun); font-size:15px; }
+.booking-panel__title { font-weight:500; color:var(--brun); font-size:15px; }
 .booking-panel__close { background:none; border:none; font-size:17px; color:var(--brun-soft); cursor:pointer; padding:4px; line-height:1; }
 .booking-panel__close:hover { color:var(--orange); }
 .booking-panel__intro { padding:14px 18px 0; font-size:14px; color:var(--brun-soft); flex:none; }

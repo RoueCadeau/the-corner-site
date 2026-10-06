@@ -165,6 +165,15 @@
 
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script src="assets/js/main.js" defer></script>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "94f4d6f1435a416b84dbb6d8daf969ca"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics (chargé après le load pour ne pas concurrencer le rendu initial) -->
+<script>
+window.addEventListener('load', function () {
+  var s = document.createElement('script');
+  s.type = 'module';
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "94f4d6f1435a416b84dbb6d8daf969ca"}');
+  document.body.appendChild(s);
+});
+</script>
 </body>
 </html>
