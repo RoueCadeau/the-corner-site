@@ -19,16 +19,33 @@
 
     <h2>En bref</h2>
     <p>
-      Ce site est volontairement <strong>sobre</strong>&nbsp;: il n'utilise <strong>aucun cookie
-      de suivi publicitaire ni de traçage</strong>. Vous pouvez le consulter librement, sans consentement
-      préalable au dépôt de cookies.
+      Ce site est volontairement <strong>sobre</strong>&nbsp;: il n'utilise <strong>aucun cookie publicitaire</strong>.
+      La seule mesure que nous effectuons est une mesure d'audience (Google Analytics), et uniquement
+      <strong>si vous l'acceptez</strong> via le bandeau affiché lors de votre première visite.
+    </p>
+
+    <h2>Mesure d'audience (Google Analytics)</h2>
+    <p>
+      Si vous cliquez sur <strong>« Accepter »</strong>, Google Analytics (Google Ireland Limited / Google LLC)
+      dépose des cookies permettant de mesurer la fréquentation du site&nbsp;: nombre de visites, pages
+      consultées, provenance du trafic. Ces données sont utilisées uniquement pour comprendre comment le site
+      est utilisé et l'améliorer ; elles ne sont ni revendues, ni croisées avec d'autres fichiers. Elles peuvent
+      être transférées vers les États-Unis, dans le cadre des clauses contractuelles types de Google.
+      Si vous cliquez sur <strong>« Refuser »</strong>, aucun cookie Analytics n'est déposé et aucune donnée
+      n'est envoyée à Google.
+    </p>
+
+    <h2>Modifier votre choix</h2>
+    <p>
+      Vous pouvez changer d'avis à tout moment en cliquant ici&nbsp;:
+      <button type="button" id="cookiePrefsReset" style="background:none; border:1px solid var(--brun); color:var(--brun); border-radius:20px; padding:8px 18px; font:inherit; cursor:pointer;">Gérer mes préférences cookies</button>
     </p>
 
     <h2>Stockage technique</h2>
     <p>
-      Nous utilisons uniquement un petit indicateur enregistré dans votre navigateur (stockage local) pour
-      mémoriser que vous avez vu notre bandeau d'information. Il ne contient aucune donnée personnelle et
-      n'est jamais transmis à des tiers.
+      Votre choix (accepté ou refusé) est enregistré dans le stockage local de votre navigateur, afin de ne pas
+      vous redemander à chaque visite. Il ne contient aucune donnée personnelle et n'est jamais transmis à des
+      tiers.
     </p>
 
     <h2>Services tiers</h2>
@@ -45,5 +62,11 @@
       <a href="mailto:antoine@cafethecorner.fr">antoine@cafethecorner.fr</a>.
     </p>
   </main>
+  <script>
+    document.getElementById('cookiePrefsReset')?.addEventListener('click', () => {
+      try { localStorage.removeItem('tc_cookie_consent'); } catch (_) {}
+      window.location.href = 'index.html';
+    });
+  </script>
 </body>
 </html>

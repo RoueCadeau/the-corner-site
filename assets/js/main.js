@@ -267,15 +267,40 @@ if (refsFilter) {
   });
 }
 
-// Bandeau cookies (information — pas de cookie de suivi sur ce site)
+// Bandeau cookies — Google Analytics n'est chargé qu'après consentement
+const GA_ID = 'G-Z56GHZDH5M';
+
+function loadAnalytics() {
+  if (window.tcAnalyticsLoaded) return;
+  window.tcAnalyticsLoaded = true;
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(script);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID);
+}
+
 const banner = document.getElementById('cookieBanner');
-const cookieOk = document.getElementById('cookieOk');
-if (banner && cookieOk) {
-  try {
-    if (!localStorage.getItem('tc_cookie_ack')) banner.hidden = false;
-  } catch (_) { banner.hidden = false; }
-  cookieOk.addEventListener('click', () => {
+const cookieAccept = document.getElementById('cookieAccept');
+const cookieRefuse = document.getElementById('cookieRefuse');
+if (banner && cookieAccept && cookieRefuse) {
+  let consent = null;
+  try { consent = localStorage.getItem('tc_cookie_consent'); } catch (_) {}
+  if (consent === 'accepted') {
+    loadAnalytics();
+  } else if (consent !== 'refused') {
+    banner.hidden = false;
+  }
+  cookieAccept.addEventListener('click', () => {
     banner.hidden = true;
-    try { localStorage.setItem('tc_cookie_ack', '1'); } catch (_) {}
+    try { localStorage.setItem('tc_cookie_consent', 'accepted'); } catch (_) {}
+    loadAnalytics();
+  });
+  cookieRefuse.addEventListener('click', () => {
+    banner.hidden = true;
+    try { localStorage.setItem('tc_cookie_consent', 'refused'); } catch (_) {}
   });
 }

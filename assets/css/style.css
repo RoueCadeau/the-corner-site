@@ -335,6 +335,9 @@ ul,ol { list-style:none; }
 .cookie p { font-size:14px; color:rgba(248,245,240,.85); flex:1; }
 .cookie a { color:var(--orange); text-decoration:underline; }
 .cookie[hidden] { display:none; }
+.cookie__actions { display:flex; gap:10px; flex-shrink:0; }
+.cookie .btn--ghost { color:var(--creme); border-color:rgba(248,245,240,.4); }
+.cookie .btn--ghost:hover { background:rgba(248,245,240,.12); color:var(--creme); }
 
 /* ---------- Legal pages ---------- */
 .legal { max-width:760px; margin:0 auto; padding:140px 28px 90px; }
