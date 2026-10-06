@@ -561,7 +561,7 @@ ul,ol { list-style:none; }
 .logos__photo--ph { background:linear-gradient(135deg,#fa4d00,#ffa472); }
 .logos__photo--ph::after { content:attr(data-name); position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--font-title); font-style:italic; font-size:25px; text-align:center; padding:14px; }
 .logos__logo { height:92px; display:flex; align-items:center; justify-content:center; padding:16px 24px; }
-.logos__logo img { max-height:52px; max-width:78%; object-fit:contain; }
+.logos__logo img { max-height:52px; max-width:78%; width:auto; object-fit:contain; }
 /* ESDES/ESTBB/ESTRI sont des logos très rognés (peu de marge transparente) : à hauteur
    égale ils paraissent bien plus gros que UCLy/IHECF/Tunon, donc on les réduit un peu. */
 .logos__logo img[src*="esdes"],
@@ -615,7 +615,7 @@ a.card { cursor:pointer; }
 a.card .card__link { margin-top:auto; }
 
 /* Bonhomme dans la bande CTA */
-.cta__illu { max-width:188px; margin:0 auto 24px; display:block; }
+.cta__illu { max-width:188px; height:auto; margin:0 auto 24px; display:block; }
 
 @media (max-width:1020px) {
   .duo { grid-template-columns:1fr; gap:40px; }
