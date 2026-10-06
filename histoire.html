@@ -192,12 +192,19 @@
 <script src="assets/js/main.js" defer></script>
 <!-- Cloudflare Web Analytics (chargé après le load pour ne pas concurrencer le rendu initial) -->
 <script>
-window.addEventListener('load', function () {
+function loadCfBeacon() {
   var s = document.createElement('script');
   s.type = 'module';
   s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
   s.setAttribute('data-cf-beacon', '{"token": "94f4d6f1435a416b84dbb6d8daf969ca"}');
   document.body.appendChild(s);
+}
+window.addEventListener('load', function () {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadCfBeacon, { timeout: 4000 });
+  } else {
+    setTimeout(loadCfBeacon, 2500);
+  }
 });
 </script>
 </body>
